@@ -16,14 +16,26 @@ class ScheduleSeeder extends Seeder
      */
     public function run()
     {
+        // DB::table('schedules')->insert([
+        //     'title'=>'今日の晩御飯',
+        //     'content'=>'大戸屋で晩御飯を食べる',
+        //     'note'=>'特になし',
+        //     'date'=>'8月２８日１９時',
+        //     'created_at'=>new Datetime(),
+        //     'updated_at'=>new Datetime(),
+        //     'user_id'=>1,
+        //     ]);
+            
         DB::table('schedules')->insert([
             'title'=>'今日の晩御飯',
-            'content'=>'大戸屋で晩御飯を食べる',
+            'content'=>'大戸屋で朝御飯を食べる',
             'note'=>'特になし',
-            'date'=>'8月２８日１９時',
+            'date'=>'8月２９日８時',
             'created_at'=>new Datetime(),
             'updated_at'=>new Datetime(),
-            'user_id'=>1,
+            'user_id'=>2,
             ]);
+            
+            
     }
 }

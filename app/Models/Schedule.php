@@ -14,8 +14,9 @@ class Schedule extends Model
         return $this->hasMany(User::class);
     }
     
-    public function getByLimit(int $limit_count = 10)
+    
+    public function getPaginateByLimit(int $limit_count = 5)
     {
-        return $this->orederBy('updated_at','DESC')->limit($limit_count)->get();
+        return $this->orderBy('updated_at','DESC')->paginate($limit_count);
     }
 }

@@ -9,6 +9,8 @@ class ScheduleController extends Controller
 {
     public function index(Schedule $schedule)
     {
-        return view('schedules/index')->with(['schedules' => $schedule->get()]);
+        return view('schedules.index')->with(['schedules' => $schedule->getPaginateByLimit(2)]);
     }
+    
+  
 }
