@@ -13,14 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+        Schema::create('category_schedule', function (Blueprint $table) {
+            $table->foreignId('category_id')->constrained('categories');
+            $table->foreignId('schedule_id')->constrained('schedules');
+            $table->primary(['category_id', 'schedule_id']);
         });
     }
 
@@ -31,7 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-         Schema::dropIfExists('users');
-       
+        // Schema::dropIfExists('category_schedule');
     }
 };

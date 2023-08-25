@@ -1,0 +1,29 @@
+/*予定作成アプリ一覧画面*/
+.all{
+    text-align: center;
+}
+
+.schedules{
+    text-align: center;
+    padding:10px;
+    border-radius:10px;
+}
+
+.edit-btn{
+   padding-top: 23px;
+ 
+   
+}
+
+.delete-btn{
+   
+    padding-top:23px;
+}
+
+.create-btn{
+    text-align: center;
+    padding-top: 30px;
+}
+.btn{
+    display: flex;
+}
