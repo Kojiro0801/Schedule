@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 
 Route::get('/', [ScheduleController::class, 'index']);
+Route::get('/schedules/{schedule}/',[ScheduleController::class,'show']);
   

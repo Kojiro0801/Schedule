@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-         Schema::table('votes',function(Blueprint $table){
-            $table->foreignId('option_id')->constrained();
-            $table->foreignId('user_id')->constrained();
-        });
+          Schema::table('votes',function(Blueprint $table){
+             $table->foreignId('option_id')->constrained();
+             $table->foreignId('user_id')->constrained();
+         });
     }
 
     /**

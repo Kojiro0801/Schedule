@@ -27,3 +27,13 @@
 .btn{
     display: flex;
 }
+/*予定作成アプリ詳細画面*/
+
+.show-page{
+    width:100%;
+}
+.sholayout{
+ width: 80%;
+  margin: 0 auto;
+  max-width: 500px;
+}

@@ -11,8 +11,8 @@
         
         <div class="schedules">
        @foreach($schedules as $schedule)
-                <h2 class="schedule-title">{{ $schedule->title }}</h2>
-            
+               
+            <a href="/schedules/{{ $schedule->id }}"><h2 class="schedule-title">{{ $schedule->title }}</h2></a>
             
        
             <div class="edit-btn">
