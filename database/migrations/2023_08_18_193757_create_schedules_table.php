@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('title',50);
             $table->string('content',500);
+            $table->string('person',50);
+            $table->string('goal',100);
             $table->string('note',1000);
             $table->string('date',500);
             $table->timestamps();

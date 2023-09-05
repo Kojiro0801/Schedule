@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-      Schema::table('schedules',function(Blueprint $table){
-            $table->foreignId('user_id')->constrained();
-        });
-    }
+     Schema::table('schedules',function(Blueprint $table){
+          $table->foreignId('user_id')->constrained();
+      });
+     }
 
     /**
      * Reverse the migrations.
