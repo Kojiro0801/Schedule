@@ -29,7 +29,7 @@
         </div>
       
            <div class="create-btn">
-               <button>予定作成</button>
+               <a href="/schedules/create">登録</a>
            </div>
         
     </body>

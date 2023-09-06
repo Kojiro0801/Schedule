@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('note',1000);
             $table->string('date',500);
             $table->timestamps();
+            $table->timestamps('deleted_at');
         });
     }
 

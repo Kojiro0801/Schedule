@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Schedule;
+use App\Http\Requests\ScheduleRequest;
 
 class ScheduleController extends Controller
 {
@@ -17,4 +18,17 @@ class ScheduleController extends Controller
       return view('schedules/show')->with(['schedule' => $schedule]);
     }
   
+  public function create(Schedule $schedule)
+  {
+      return view('schedules.create');
+  }
+  
+  public function store(ScheduleRequest $request, Schedule $schedule)
+  
+  {
+     
+      $input = $request['schedule'];
+      $schedule->fill($input)->save();
+      return redirect('/schedules/' . $schedule->id);
+  }
 }
