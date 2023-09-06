@@ -8,6 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Schedule extends Model
 {
     use HasFactory;
+     protected $fillable =[
+        'title',
+        'goal',
+        'content',
+        'person',
+        'date',
+        'note'
+        ];
     
     public function users()
     {
