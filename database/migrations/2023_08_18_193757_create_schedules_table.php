@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string('content',500);
             $table->string('person',50);
             $table->string('goal',100);
-            $table->string('note',1000);
+            $table->string('note',1000)->nullable(true);
             $table->string('date',500);
             $table->timestamps();
-            $table->timestamps('deleted_at');
+            $table->softDeletes();
         });
     }
 

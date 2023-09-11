@@ -22,3 +22,4 @@ Route::get('/', [ScheduleController::class, 'index']);
 Route::get('/schedules/create',[ScheduleController::class,'create']);
 Route::get('/schedules/{schedule}/',[ScheduleController::class,'show']);
 Route::post('/schedules/',[ScheduleController::class,'store']);
+Route::delete('/schedules/{schedule}',[ScheduleController::class,'delete']);
