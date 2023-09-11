@@ -8,6 +8,7 @@ use App\Http\Requests\ScheduleRequest;
 
 class ScheduleController extends Controller
 {
+    
     public function index(Schedule $schedule)
     {
         return view('schedules.index')->with(['schedules' => $schedule->getPaginateByLimit()]);
@@ -30,5 +31,11 @@ class ScheduleController extends Controller
       $input = $request['schedule'];
       $schedule->fill($input)->save();
       return redirect('/schedules/' . $schedule->id);
+  }
+  
+  public function delete(Schedule $schedule)
+  {
+      $schedule->delete();
+      return redirect('/');
   }
 }

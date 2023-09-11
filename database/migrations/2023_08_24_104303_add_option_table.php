@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
       Schema::table('options',function(Blueprint $table){
-            $table->foreignId('plan_id')->constrained();
+          $table->foreignId('plan_id')->constrained();
         });
     }
 

@@ -15,22 +15,31 @@
                     <a href="/schedules/{{ $schedule->id }}">{{ $schedule->title }}</a>
                 </h2>
             
-            
-       
-            <div class="edit-btn">
-                <button>予定編集</button>
-            </div>
-        
              
-             <div class="delete-btn">
-                <button>削除</button>
-             </div>
+             <form action="/schedules/{{ $schedule->id }}" id="form_{{ $schedule->id }}" method="post">
+                 @csrf
+                 @method('DELETE')
+                 <button type="button" onclick="deleteSchedule({{ $schedule->id }})">delete</button>
+             </form>
         @endforeach
         </div>
       
            <div class="create-btn">
                <a href="/schedules/create">登録</a>
            </div>
+           
+           <script>
+               function deleteSchedule(id){
+                   'use strict'
+                   
+                   if(confirm('削除すると復元できません。\n本当に削除しますか?'))
+                   {
+                       document.getElementById(`form_${id}`).submit();
+                   }
+               }
+           </script>
+           
+           <div class="paginate">{{ $schedules->links() }}</div>
         
     </body>
     

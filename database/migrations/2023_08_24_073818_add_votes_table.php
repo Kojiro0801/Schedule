@@ -15,7 +15,7 @@ return new class extends Migration
     {
           Schema::table('votes',function(Blueprint $table){
              $table->foreignId('option_id')->constrained();
-             $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id')->constrained();
          });
     }
 
