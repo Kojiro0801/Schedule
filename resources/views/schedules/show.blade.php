@@ -8,7 +8,12 @@
     </head>
     <body>
         <div class="show-page">
-            <div class="show-layout">
+            
+            <div class="title">
+                <h3>目的:</h3>
+                {{ $schedule->title }}
+            </div>
+            
                 
             <div class="goal">
                 <h3>予定先:</h3>
@@ -34,14 +39,15 @@
                <h3>その他</h3>
                 {{ $schedule->note }}
             </div>
-
-        
+            
+            <div class="edit">
+                <a href="/schedules/{{ $schedule->id }}/edit">編集</a>
+            </div>
+            
             <div class="footer">
                 <a href="/">戻る</a>
             </div>
-            
-            </div>
-        
+        　　　
             </div>
     </body>
     </html>

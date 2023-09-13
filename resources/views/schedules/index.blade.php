@@ -28,6 +28,7 @@
                <a href="/schedules/create">登録</a>
            </div>
            
+           
            <script>
                function deleteSchedule(id){
                    'use strict'
@@ -40,6 +41,8 @@
            </script>
            
            <div class="paginate">{{ $schedules->links() }}</div>
+           
+           <p class="log_user">ユーザー名:{{ Auth::user()->name }}</p>
         
     </body>
     
