@@ -41,8 +41,9 @@
             </div>
             
             <div class="edit">
-                <a href="/schedules/{{ $schedule->id }}/edit">編集</a>
+                <a href="/schedules//edit">編集</a>
             </div>
+           
             
             <div class="footer">
                 <a href="/">戻る</a>
