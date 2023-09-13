@@ -24,6 +24,7 @@ class ScheduleController extends Controller
       return view('schedules.create');
   }
   
+  
   public function store(ScheduleRequest $request, Schedule $schedule)
   
   {
@@ -33,9 +34,23 @@ class ScheduleController extends Controller
       return redirect('/schedules/' . $schedule->id);
   }
   
+  public function edit(Schedule $schedule)
+  {
+      return view('schedules.edit')->with(['schedule' => $schedule]);
+  }
+  
+  public function update(Request $request, Schedule $schedule)
+  {
+      $input_schedule = $request['schedule'];
+      $schedule->fill($input_schedule)->save();
+      
+      return redirect('/schedules/' . $schedule->id);
+  }
+  
   public function delete(Schedule $schedule)
   {
       $schedule->delete();
       return redirect('/');
   }
+  
 }

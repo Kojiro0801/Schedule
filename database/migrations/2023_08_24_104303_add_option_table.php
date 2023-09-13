@@ -15,7 +15,7 @@ return new class extends Migration
     {
       Schema::table('options',function(Blueprint $table){
           $table->foreignId('plan_id')->constrained();
-        });
+         });
     }
 
     /**
