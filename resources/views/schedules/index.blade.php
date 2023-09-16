@@ -22,12 +22,17 @@
                  <button type="button" onclick="deleteSchedule({{ $schedule->id }})">delete</button>
              </form>
         @endforeach
-        </div>
+        
       
            <div class="create-btn">
                <a href="/schedules/create">登録</a>
            </div>
            
+           <div class="index_vote-btn">
+               <a href="/plans/index_vote">投票</a>
+           </div>
+           
+           </div>
            
            <script>
                function deleteSchedule(id){

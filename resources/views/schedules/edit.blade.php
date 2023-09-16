@@ -37,11 +37,27 @@
                <input type="text" name='schedule[note]' value="{{ $schedule->note }}">
             </div>
             
-           <input type="submit" value="保存">
+           <!--<input type="submit" value="保存">-->
+           
+           
+             <form action="/schedules/{{ $schedule->id }}" id="form_{{ $schedule->id }}" method="post">
+                 @csrf
+                 <button type="submit" onclick="editSchedule({{ $schedule->id }})">保存</button>
+             </form>
             
             </form>
             </div>
             
+             <script>
+               function editSchedule(id){
+                   'use strict'
+                   
+                   if(confirm('{{ $schedule->note }}'))
+                   {
+                       document.getElementById(`form_${id}`).submit();
+                   }
+               }
+           </script>
     </body>
     
     </html>
