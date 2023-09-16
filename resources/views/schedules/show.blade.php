@@ -41,7 +41,7 @@
             </div>
             
             <div class="edit">
-                <a href="/schedules//edit">編集</a>
+                <a href="/schedules/{{ $schedule->id }}/edit">編集</a>
             </div>
            
             

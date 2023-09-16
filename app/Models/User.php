@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         $this->belongsTo(Schedule::class);
     }
+    
+    public function votes()
+    {
+        $this->hasMany(Vote::class);
+    }
 }

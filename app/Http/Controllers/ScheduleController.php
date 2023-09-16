@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Schedule;
 use App\Http\Requests\ScheduleRequest;
+use Illuminate\Support\Facades\Auth;
 
 class ScheduleController extends Controller
 {
@@ -28,7 +29,7 @@ class ScheduleController extends Controller
   public function store(ScheduleRequest $request, Schedule $schedule)
   
   {
-     
+      $schedule->user_id = \Auth::id();
       $input = $request['schedule'];
       $schedule->fill($input)->save();
       return redirect('/schedules/' . $schedule->id);
@@ -52,5 +53,6 @@ class ScheduleController extends Controller
       $schedule->delete();
       return redirect('/');
   }
+  
   
 }

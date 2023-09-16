@@ -16,7 +16,8 @@ class Schedule extends Model
         'content',
         'person',
         'date',
-        'note'
+        'note',
+        'user_id'
         ];
     
     public function users()
