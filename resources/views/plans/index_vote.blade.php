@@ -10,9 +10,10 @@
         <h1>投票候補画面一覧</h1>
         @foreach($plans as $plan)
             <h2 class="plan_title">
-                <a href="/plans/{{ $plan->id }}">{{ $plan->title}}</a>
+                <a href="/plans/{{ $plan->id }}">{{ $plan->title }}</a>
             </h2>
         @endforeach
+        
         
     </body>
     

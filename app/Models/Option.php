@@ -11,7 +11,7 @@ class Option extends Model
     
     public function plans()
     {
-        return $this->hasMany(Plan::class);
+        return $this->belongsTo(Plan::class);
     }
     
     public function votes()
