@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\PlanController;
+use App\Http\Controllers\OptionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,7 +36,8 @@ Route::controller(ScheduleController::class)->middleware(['auth'])->group(functi
 });
 
 Route::get('/plans/index_vote',[PlanController::class,'index_vote']);
-// Route::get('/plans{plan}',[PlanController::class,'show_vote']);
+Route::get('/plans/{plan}',[PlanController::class,'show_vote']);
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
